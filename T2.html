@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Aman Shukla</title>
+    <style>
+      body {
+        background-color: #ffffff;
+      }
+      h1 {
+        text-align: center;
+        color: #000000;
+        font-size: 24pt;
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="heading">Welcome to my webpage!</h1>
+    <button id="myButton">Change background and text</button>
+    <button>Click Me</button>
+    <script>
+      var button = document.querySelector("#myButton");
+      var heading = document.querySelector("#heading");
+      button.addEventListener("click", function() {
+        document.body.style.backgroundColor = "#90EE90";
+        heading.innerHTML = "The background and text have changed!";
+        heading.style.color = "#FF0000";
+        heading.style.fontSize = "48pt";
+      });
+    </script>
+  </body>
+</html>

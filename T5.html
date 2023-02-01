@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Aman Shukla</title>
+    <style>
+      main {
+        background-color: #90EE90;
+        padding: 20px;
+      }
+      .main-content {
+        font-size: 20px;
+        text-align: center;
+      }
+      .main-content p {
+        margin: 10px;
+      }
+      h1 {
+        text-align: center;
+        color: #000000;
+        font-size: 36px;
+      }
+      button {
+        display: block;
+        margin: 20px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="heading">My Webpage</h1>
+    <main id="main-section">
+      <div class="main-content">
+        <h2>Main Section Content</h2>
+        <p>This content is for main section.</p>
+      </div>
+    </main>
+    <aside>
+      <h2>Aside Content</h2>
+      <p>This is shown as a side content below the main one.</p>
+    </aside>
+    <button id="colorButton">Change Color of h1</button>
+    <script>
+      var colorButton = document.querySelector("#colorButton");
+      var heading = document.querySelector("#heading");
+      var colorIndex = 0;
+      var colors = ["#FF0000", "#00FF00", "#0000FF"];
+      colorButton.addEventListener("click", function() {
+        heading.style.color = colors[colorIndex];
+        colorIndex = (colorIndex + 1) % colors.length;
+      });
+    </script>
+  </body>
+</html>

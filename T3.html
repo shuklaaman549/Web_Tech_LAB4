@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Aman Shukla</title>
+    <style>
+      .lightgreen {
+        background-color: #90EE90;
+      }
+      h1 {
+        text-align: center;
+        color: #000000;
+        font-size: 24pt;
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="heading">Welcome to my webpage!</h1>
+    <button id="myButton">Change background and text</button>
+    <button>Click Me</button>
+    <script>
+      var button = document.querySelector("#myButton");
+      var heading = document.querySelector("#heading");
+      button.addEventListener("click", function() {
+        alert("Before assigning the class attribute to the document object.");
+        document.body.className = "lightgreen";
+        heading.innerHTML = "The background and text have changed!";
+        heading.style.color = "#FF0000";
+        heading.style.fontSize = "48pt";
+        alert("After assigning the class attribute to the document object.");
+      });
+    </script>
+  </body>
+</html>

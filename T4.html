@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Aman Shukla</title>
+    <style>
+      main {
+        background-color: #90EE90;
+        padding: 20px;
+      }
+      .main-content {
+        font-size: 20px;
+        text-align: center;
+      }
+      .main-content p {
+        margin: 10px;
+      }
+      .replacement-content {
+        background-color: #FFFFFF;
+        padding: 20px;
+        font-size: 16px;
+        text-align: left;
+      }
+      .replacement-content h2 {
+        font-size: 24px;
+        margin: 10px 0;
+      }
+      .replacement-content p {
+        margin: 10px;
+      }
+      button {
+        display: block;
+        margin: 20px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>My Webpage</h1>
+    </header>
+    <main id="main-section">
+      <div class="main-content">
+        <h2>Main Section Content</h2>
+        <p>This line is written for the main content. Though this is quite a bit short but will work at the moment.</p>
+      </div>
+    </main>
+    <aside>
+      <h2>Aside Content</h2>
+      <p>This is about the side content. This is going to be visible as a side content below the main content.</p>
+    </aside>
+    <button id="replaceButton">Replace Main Section Content</button>
+    <script>
+      var replaceButton = document.querySelector("#replaceButton");
+      var mainSection = document.querySelector("#main-section");
+      replaceButton.addEventListener("click", function() {
+        mainSection.innerHTML = `
+          <div class="replacement-content">
+            <h2>Replacement Content</h2>
+            <p>Okay! So this is going to be the replaceable line of that main content and this looks fine too.</p>
+          </div>
+        `;
+      });
+    </script>
+  </body>
+</html>
